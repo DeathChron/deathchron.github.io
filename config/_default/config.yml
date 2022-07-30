@@ -1,0 +1,27 @@
+baseURL: https://deathchron.github.io/
+title: DeathChron's blog
+languageCode: en-us
+theme: PaperMod
+
+enableRobotsTXT: true
+
+publishDir: docs
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+enableEmoji: true
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai

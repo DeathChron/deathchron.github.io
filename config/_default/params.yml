@@ -1,0 +1,75 @@
+env: production # to enable google analytics, opengraph, twitter-cards and schema.
+title: DeathChron's blog
+description: All we ever see of stars are their old photographs.
+keywords: [Blog, DeathChron, Hacking, Pentesting, Red, Team, Programming]
+author: ["Alejandro Cruz Martínez", "Rubén Santos García", "Ismael Gómez Esquilichi"] 
+images: ["<link or path of image for opengraph, twitter-cards>"] ########################################
+DateFormat: "2 January, 2006"
+defaultTheme: auto # dark, light
+disableThemeToggle: false
+
+ShowReadingTime: true
+ShowShareButtons: true
+ShowPostNavLinks: true
+ShowBreadCrumbs: true
+ShowCodeCopyButtons: true
+ShowWordCount: true
+ShowRssButtonInSectionTermList: true
+UseHugoToc: true
+disableSpecial1stPost: false
+disableScrollToTop: false
+comments: false
+hidemeta: false
+hideSummary: false
+showtoc: false
+tocopen: false
+
+assets:
+  # disableHLJS: true # to disable highlight.js
+  # disableFingerprinting: true
+  favicon: /images/icon/favicon.ico
+  favicon16x16: /images/icon/favicon-16x16.png
+  favicon32x32: /images/icon/favicon-32x32.png
+  apple_touch_icon: images/icon/apple-icon.png
+  safari_pinned_tab: /images/icon/favicon.svg
+
+profileMode:
+  enabled: true
+  title: DeathChron's blog
+  subtitle: All we ever see of stars are their old photographs.
+  imageUrl: /images/icon/DeathChron.png
+  imageWidth: 200
+  imageHeight: 200
+  imageTitle: DeathChron
+  buttons:
+    - name: Series
+      url: series/
+    - name: Archive
+      url: archive/
+
+socialIcons:
+  - name: github
+    url: "https://github.com/DeathChron"
+
+analytics:
+  google:
+    SiteVerificationTag: "XYZabc"
+  bing:
+    SiteVerificationTag: "XYZabc"
+  yandex:
+    SiteVerificationTag: "XYZabc"
+
+cover:
+  hidden: false
+  hiddenInList: false
+  hiddenInSingle: false
+  responsiveImages: true
+
+fuseOpts:
+  isCaseSensitive: false
+  shouldSort: true
+  location: 0
+  distance: 1000
+  threshold: 0.2
+  minMatchCharLength: 0
+  keys: ["title", "permalink", "summary", "content"]

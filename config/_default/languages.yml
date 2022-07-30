@@ -1,0 +1,17 @@
+en:
+      languageName: "English"
+      weight: 1
+      menu:
+        main:
+          - name: Search
+            url: search/
+            weight: 1
+          - name: Series
+            url: series/
+            weight: 2
+          - name: Archive
+            url: archive/
+            weight: 3
+          - name: Tags
+            url: tags/
+            weight: 10
