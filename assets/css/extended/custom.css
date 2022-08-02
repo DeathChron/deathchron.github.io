@@ -1,0 +1,19 @@
+.grid-entry .entry-cover img {
+    height: 215px;
+}
+
+.grid-entry .entry-link {
+    height: 215px;
+}
+
+.lista-entry {
+    padding: 10px 0px;
+}
+
+.lista-entry .entry-cover img {
+    height: 150px;
+}
+
+.disabled {
+    color: var(--death-primary);
+}

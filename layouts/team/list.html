@@ -1,0 +1,39 @@
+{{- define "main" }}
+
+{{- if not .IsHome | and .Title }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>
+    {{ .Title }}
+  </h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description | markdownify }}
+  </div>
+  {{- end }}
+</header>
+{{- end }}
+
+<section class="team">
+    <div class="container space">
+        {{range .RegularPages }}
+        <div class="box">
+            <div class="top-bar"></div>
+            <div class="content">
+                <a href="{{.File.BaseFileName}}"><img src="{{.Params.image}}" alt="{{.File.BaseFileName}} image"></a>
+                <a href="{{.File.BaseFileName}}"><strong>{{.Title}}</strong></a>
+                <p>@{{.File.BaseFileName}}</p>
+            </div>
+            <div class="icons">
+                {{range .Params.social }}
+                <a target="_blank" href="{{.link}}">
+                    <i class="{{.icon}}"></i>
+                </a>
+                {{end}}
+            </div>
+        </div>
+        {{end}}
+    </div>
+</section>
+
+{{- end }}{{/* end main */}}

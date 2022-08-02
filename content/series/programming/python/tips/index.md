@@ -1,6 +1,6 @@
 ---
-title: "Python tips and tricks"
-author: Rubén Santos García
+title: Python tips and tricks
+author: Rubén Santos
 date: 2021-08-31T12:10:00+02:00
 summary: Interesting tips and tricks I have learned these last months and I use constantly.
 tags: [tips]

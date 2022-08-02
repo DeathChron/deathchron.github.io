@@ -1,6 +1,6 @@
 ---
 title: Cap
-author: Rubén Santos García
+author: Rubén Santos
 date: 2021-08-31T12:10:00+02:00
 summary: Easy Hack The Box machine created by InfoSecJack.
 tags: [htb]

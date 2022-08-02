@@ -3,7 +3,7 @@ title: DeathChron's blog
 description: All we ever see of stars are their old photographs.
 keywords: [Blog, DeathChron, Hacking, Pentesting, Red, Team, Programming]
 author: ["Alejandro Cruz Martínez", "Rubén Santos García", "Ismael Gómez Esquilichi"] 
-images: ["<link or path of image for opengraph, twitter-cards>"] ########################################
+images: /images/skeletor.jpg
 DateFormat: "2 January, 2006"
 defaultTheme: auto # dark, light
 disableThemeToggle: false
@@ -14,7 +14,8 @@ ShowPostNavLinks: true
 ShowBreadCrumbs: true
 ShowCodeCopyButtons: true
 ShowWordCount: true
-ShowRssButtonInSectionTermList: true
+ShowAllPagesInArchive: true
+ShowRssButtonInSectionTermList: false
 UseHugoToc: true
 disableSpecial1stPost: false
 disableScrollToTop: false
@@ -44,8 +45,8 @@ profileMode:
   buttons:
     - name: Series
       url: series/
-    - name: Archive
-      url: archive/
+    - name: Search
+      url: search/
 
 socialIcons:
   - name: github
@@ -70,6 +71,6 @@ fuseOpts:
   shouldSort: true
   location: 0
   distance: 1000
-  threshold: 0.2
+  threshold: 0.1
   minMatchCharLength: 0
   keys: ["title", "permalink", "summary", "content"]

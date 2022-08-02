@@ -1,0 +1,78 @@
+{{define "main"}}
+
+{{- if not .IsHome | and .Title }}
+<header class="page-header">
+    {{- partial "breadcrumbs.html" . }}
+    <h1>
+        {{ .Title }}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description | markdownify }}
+    </div>
+    {{- end }}
+    {{range .Params.social }}
+    <a target="_blank" href="{{.link}}" class="big-icon">
+        <i style="color: var(--death-primary);" class="{{.icon}}"></i>
+    </a>
+    {{end}}
+</header>
+{{- end }}
+
+<section class="team">
+    <div class="container">
+        <img class="big-image" src="{{.Params.image}}" alt="{{.Params.alias}} image">
+    </div>
+    <div class="space">
+        <div class="content">
+            {{.Content}}
+        </div>
+    </div>
+</section>
+
+<div class="container space">
+    <h1>Posts</h1>
+    <div class="row space-sm">
+        {{- $pages := union .RegularPages .Sections }}
+
+        {{- if .IsHome }}
+        {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+        {{- end }}
+
+        {{- $paginator := .Paginate $pages }}
+        {{- $term := .Data.Term }}
+        {{ range where site.RegularPages "Params.author" .Title }}
+
+        {{- $class := "lista-entry" }}
+
+        {{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
+
+        <div class="col-12">
+            <article class="{{ $class }}">
+                {{- $isHidden := (site.Params.cover.hidden | default site.Params.cover.hiddenInList) }}
+                <a class="row" href="{{ .Permalink }}">
+                    <div class="col-4">
+                            {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
+                    </div>
+                    <div class="col-8">
+                        <header class="entry-header">
+                            <h2>
+                                {{- .Title }}
+                                {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{-
+                                end
+                                }}
+                            </h2>
+                        </header>
+                        <div class="entry-content">
+                            <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+                        </div>
+                    </div>
+                </a>
+
+            </article>
+        </div>
+        {{- end }}
+    </div>
+</div>
+
+{{end}}

@@ -1,0 +1,87 @@
+.team .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.team .box {
+  position: relative;
+  min-width: 250px;
+  background-color: var(--entry);
+  box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.team .05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.team .top-bar {
+  width: 50%;
+  height: 4px;
+  background: var(--death-primary);
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.team .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+  }
+.team .content img {
+  width: 135px;
+  height: 135px;
+  border-radius: 100px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 10px;
+}
+.team .content strong {
+  font-weight: 500;
+  color: var(--primary);
+  margin-top: 10px;
+}
+.team .content p {
+  font-size: 15px;
+  color: #7a7a7a;
+  margin: 3px 0px 13px 0px;
+}
+
+.team .icons a {
+    color: var(--death-primary) !important;
+    margin: 0px 3.5px;
+}
+
+.team .big-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px !important;
+}
+
+.big-icon{
+  font-size: 27px;
+  margin-right: 10px;
+}
+
+.space {
+  padding-top: 40px;
+}
+.space-sm {
+  padding-top: 20px;
+}
+
+.space-xs {
+  padding-top: 10px;
+}

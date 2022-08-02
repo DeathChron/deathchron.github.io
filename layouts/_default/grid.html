@@ -1,0 +1,54 @@
+{{- define "main" }}
+
+{{- if not .IsHome | and .Title }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>
+    {{ .Title }}
+  </h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description | markdownify }}
+  </div>
+  {{- end }}
+</header>
+{{- end }}
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      {{- $pages := union .RegularPages .Sections }}
+
+      {{- if .IsHome }}
+      {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+      {{- end }}
+
+      {{- $paginator := .Paginate $pages }}
+      {{- $term := .Data.Term }}
+      {{- range $index, $page := $paginator.Pages }}
+
+      {{- $class := "grid-entry" }}
+
+      {{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
+
+      <div class="col-12 col-md-6">
+        <a href="{{ .Permalink }}" class="{{ $class }}">
+          {{- $isHidden := (site.Params.cover.hidden | default site.Params.cover.hiddenInList) }}
+          {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
+          <header class="entry-header">
+            <h2>
+              {{- .Title }}
+              {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+            </h2>
+          </header>
+          <div class="entry-content">
+            <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+          </div>
+        </a>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+{{- end }}{{/* end main */}}
