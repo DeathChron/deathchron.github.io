@@ -1,5 +1,5 @@
 env: production # to enable google analytics, opengraph, twitter-cards and schema.
-title: DeathChron's blog
+title: DeathChron
 description: All we ever see of stars are their old photographs.
 keywords: [Blog, DeathChron, Hacking, Pentesting, Red, Team, Programming]
 author: ["Alejandro Cruz Martínez", "Rubén Santos García", "Ismael Gómez Esquilichi"] 
@@ -36,7 +36,7 @@ assets:
 
 profileMode:
   enabled: true
-  title: DeathChron's blog
+  title: DeathChron
   subtitle: All we ever see of stars are their old photographs.
   imageUrl: /images/icon/DeathChron.png
   imageWidth: 200
@@ -45,8 +45,8 @@ profileMode:
   buttons:
     - name: Series
       url: series/
-    - name: Search
-      url: search/
+    - name: Tools
+      url: tools/
 
 socialIcons:
   - name: github

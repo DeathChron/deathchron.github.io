@@ -17,4 +17,7 @@ en:
         weight: 4
       - name: Meet the team
         url: team/
-        weight: 10
+        weight: 5
+      - name: Tools
+        url: tools/
+        weight: 6
