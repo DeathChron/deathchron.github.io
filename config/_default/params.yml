@@ -45,8 +45,8 @@ profileMode:
   buttons:
     - name: Series
       url: series/
-    - name: Tools
-      url: tools/
+    - name: Workshop
+      url: workshop/
 
 socialIcons:
   - name: github
